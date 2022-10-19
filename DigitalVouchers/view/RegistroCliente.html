@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegistroCliente</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/estiloHome.css">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+    <div class="container">
+        <header>
+            <div class="row">
+                <div class="col-12">
+                    <h2 style="color: white; padding-left: 0.5em; padding-top: 0.3em;">Digital Vouchers</h2>
+                </div>
+            </div>
+        </header> 
+        
+        <div class="row" style="background-color: black; width: 100%; margin-left: 0%;">
+            <div class="col-12">
+                <h2 style="color: white;">Crear Cuenta Persona</h2>
+            </div>
+        </div>
+
+        <div class="row" style="background-color: grey; width: 100%; margin-left: 0%;">
+            <div class="col-12">
+                <br> <br>
+            </div>
+        </div>
+
+        <div class="row" style="background-color: grey; width: 100%; margin-left: 0%;">
+            <div class="col-1"></div>
+            <div class="col-7">
+                <form>
+                    <legend>REGISTRATE PARA CREAR TU USUARIO</legend>
+                    <hr>
+                    <!--
+                    <div class="row">                     
+                        <label for="docu" class="col-lg-2 col-md-12 col-form-label" style="display: flex; justify-content: flex-end;">DOCUMENTO</label>
+                        <select class="col-lg-2 col-md-12 form-select" id="docu" style="height: 2.3em; width: 10em;">
+                          <option selected>DNI</option>
+                          <option value="php">Libreta Cívica</option>
+                          <option value="java">Libreta de Enrolamiento</option>
+                        </select>
+
+                        <label for="inputNroDni" class="col-lg-2 col-md-6 col-sm-12 col-form-label" style="display: flex; justify-content: flex-end;">NRO. DNI</label>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <input type="dni" class="form-control" id="inputNroDni">
+                        </div>
+                    </div>
+                    -->
+                    <div class="row">   
+
+                        <label for="docu" class="col-lg-2 col-md-6 col-sm-12 col-form-label">DOCUMENTO</label>
+                        <select class="col-lg-4 col-md-6 col-sm-12 form-select" id="docu" style="width: 9em; height: 2.3em;">
+                          <option selected>DNI</option>
+                          <option value="php">Libreta Cívica</option>
+                          <option value="java">Libreta de Enrolamiento</option>
+                        </select>
+
+                        <label for="inputNroDni" class="col-lg-2 col-md-6 col-sm-12 col-form-label">NUMERO DNI</label>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <input type="dni" class="form-control" id="inputNroDni" style="width: 13em;">
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="row">
+                        <label for="inputNombres" class="col-7 col-form-label">NOMBRES</label>
+                        <label for="inputApellido" class="col-5 col-form-label">APELLIDO</label>
+                    </div>                        
+
+                    <div class="row">
+                        <div class="col-6" >
+                            <input type="nombres" class="form-control" id="inputNombres">
+                        </div>                       
+                        <div class="col-1"></div>
+                        <div class="col-4">
+                            <input type="apellido" class="form-control" id="inputApellido">
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="row">
+                        <label for="inputEMail" class="col-7 form-label">EMAIL</label>
+                        <label for="inputTelefono" class="col-5 form-label">TELEFONO</label>
+                    </div>
+                    <div class="row">
+                        <div class="col-5">
+                            <input type="email" class="form-control" id="inputEMail">
+                        </div>
+                        <div class="col-2"></div>
+                        <div class="col-4">
+                            <input type="telefono" class="form-control" id="inputTelefono">
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="inputContraseña" class="form-label">CONTRASEÑA</label>
+                        </div>
+                        <div class="col-6">
+                            <label for="inputConfirmaContraseña" class="form-label">CONFIRMA CONTRASEÑA</label>
+                        </div>
+                    </div>
+                        
+                    <div class="row">
+                        <div class="col-5">
+                            <input type="contraseña" class="form-control" id="inputContraseña">
+                        </div>
+                        <div class="col-1"></div>
+                        <div class="col-5">
+                            <input type="confirmacontraseña" class="form-control" id="inputConfirmaContraseña">
+                        </div>
+                    </div>
+                    <br><br>
+
+                    <div class="row">
+                        <label for="inputFechaNacimiento" class="col-lg-3 col-md-6 col-sm-6 col-form-label">FECHA NACIMIENTO</label>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <input type="fechanacimiento" class="form-control" id="inputFechaNacimiento" style="width: 10em;">
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="inputProvincia" class="form-label">PROVINCIA</label>
+                        </div>
+                        <div class="col-6">
+                            <label for="inputLocalidad" class="form-label">LOCALIDAD</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-5">
+                            <input type="provincia" class="form-control" id="inputProvincia">
+                        </div>
+                        <div class="col-1"></div>
+                        <div class="col-5">
+                            <input type="localidad" class="form-control" id="inputLocalidad">
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="row">
+                        <label for="inputCalle" class="col-7 col-form-label">CALLE</label>
+                        <label for="inputNumero" class="col-5 col-form-label">NÚMERO</label>
+                    </div>                        
+
+                    <div class="row">
+                        <div class="col-6" >
+                            <input type="calle" class="form-control" id="inputCalle" style="width: 100% ;">
+                        </div>                       
+                        <div class="col-1"></div>
+                        <div class="col-4">
+                            <input type="numero" class="form-control" id="inputNumero" style="width: 100% ;">
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="col-12">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                          <label class="form-check-label" for="invalidCheck">
+                            Acepto los términos y condiciones.
+                          </label>
+                          <div class="invalid-feedback">
+                            Debe estar de acuerdo para poder enviar y avanzar con su registro.
+                          </div>
+                        </div>
+                    </div>
+
+                    <br> <br>
+
+                    <div class="row">
+                        <div class="col-lg-7 col-md-12"></div>
+
+                        <div class="col-lg-2 col-md-12">
+                            <!--<button type="button" class="btn btn-primary" style="width: 100%;">Volver</button>-->
+                            <a href="VouchersHome.html" class="btn btn-primary" style="width: 100%;">Volver</a>
+                        </div>
+
+                        <div class="col-lg-2 col-md-12">
+                            <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registroForm1" style="width: 100%;">Enviar</button>
+                            <!--
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registroForm1" style="width: 100%;">Enviar</button>
+                            -->
+
+                            <!--Modal posterior a envío de formulario en el caso que el mismo se haya completado de forma completa-->     
+                            <div class="modal" tabindex="-1" id="registroForm" >
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                        <h5 class="modal-title">Información</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                        <p id="modalForm">La información de registro se envío de forma correcta. 
+                                            Revise su cuenta de correo y confirme la recepción para completar el registro.
+                                            Muchas gracias!!!</p>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                    </div>
+
+                    </div>
+
+                </form>
+                <br><br>
+            </div>
+            <div class="col-4"></div>
+        </div>
+    
+</body>
+</html>

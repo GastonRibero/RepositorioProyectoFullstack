@@ -1,0 +1,73 @@
+header{
+    background-color: rgb(61, 54, 103); 
+}
+
+section article h3{
+    color: red;
+}
+
+h6{
+    color: rgb(39, 135, 138);
+}
+
+h6:hover{
+    color: white;
+}
+
+section{
+    margin-block-end: 0;
+    background-image: url(../imagenes/vouchersDigitales10.jpg);
+    background-size: cover; 
+}
+
+article{
+    margin-left: 1em;
+    margin-right: 5em;
+}
+
+footer{
+    background-color:  rgb(61, 54, 103);
+    padding: 1em; 
+}
+footer>p{
+    color: white;
+    text-align: center;
+}
+
+#aside{
+    background: -webkit-linear-gradient(70deg, white, rgb(81, 131, 129) 90%);
+    margin-left: -0.75em;
+}
+
+article>h3{
+    color: white;
+}
+
+article>p{
+    font:bold;
+}
+
+#cont-1{
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 0.3em; 
+    border-color: black; 
+    border: solid; 
+    width: auto;
+    height: auto;
+}
+
+#modalForm{
+    white-space: pre-line;
+}
+
+.modal{
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    transition: all .5s;
+}
+
