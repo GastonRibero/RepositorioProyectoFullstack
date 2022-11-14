@@ -35,7 +35,8 @@
         <div class="row" style="background-color: grey; width: 100%; margin-left: 0%;">
             <div class="col-1"></div>
             <div class="col-7">
-                <form class="needs-validation" novalidate>
+                <form name="loginPersona" class="needs-validation" method="post">
+                    <!--onsubmit="return validacionLogin()"-->
                     <legend>INGRESÁ A TU CUENTA</legend>
                     <hr>
           
@@ -45,11 +46,12 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-5 col-md-8 col-sm-12">
-                            <input type="email" class="form-control h-100" id="inputEMail" required>
+                            <input type="email" class="form-control h-100" id="inputEMail" placeholder="usuario@dominio" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required autofocus>
                         </div>
+                        <!--
                         <div class="invalid-feedback">
                             Ingrese un correo válido
-                        </div>
+                        </div>-->
                     </div>
 
                     <br><br>
@@ -62,7 +64,7 @@
                         
                     <div class="row">
                         <div class="col-lg-5 col-md-8 col-sm-12">
-                            <input type="contraseña" class="form-control h-100" id="inputContraseña">
+                            <input type="password" class="form-control h-100" id="inputContraseña" placeholder="**********"  maxlength="10" required> 
                         </div>
                     </div>
                     <br> 
@@ -104,7 +106,7 @@
 
                         <div class="col-lg-2 col-md-12 col-sm-12">
 
-                            <button class="btn btn-primary" type="submit" style="width: 100%;">Login</button>
+                            <button class="btn btn-primary" type="submit" style="width: 100%;" onclick="mensaje()">Login</button>
 
                             <div class="modal" tabindex="-1" id="" >
                                 <div class="modal-dialog">
@@ -133,5 +135,7 @@
             <div class="col-4"></div>
         </div>
     
-</body>
+        <script src="js/script.js"></script>
+
+    </body>
 </html>
