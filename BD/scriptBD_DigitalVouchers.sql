@@ -1,6 +1,7 @@
 CREATE DATABASE digitalvouchers;
 USE digitalvouchers;
 
+
 CREATE TABLE situacion_impositiva(
   ID_si INT NOT NULL AUTO_INCREMENT,
   Descripcion_si VARCHAR(30) NOT NULL,
