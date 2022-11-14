@@ -43,7 +43,7 @@
                             Persona
                           </button>
                           <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-                            <li><a class="dropdown-item active" href="LogueoCliente.html">Iniciar Sesión</a></li>
+                            <li><a class="dropdown-item active" href="LoginCliente.html">Iniciar Sesión</a></li>
                             <li><a class="dropdown-item" href="RegistroCliente.html" target="_parent">Registrarme</a></li>
                           </ul>
                         </div>
@@ -55,8 +55,8 @@
                             Comercio
                           </button>
                           <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-                            <li><a class="dropdown-item active" href="#">Iniciar Sesión</a></li>
-                            <li><a class="dropdown-item" href="#">Registrarme</a></li>
+                            <li><a class="dropdown-item active" href="LoginComercio.html">Iniciar Sesión</a></li>
+                            <li><a class="dropdown-item" href="RegistroComercio.html">Registrarme</a></li>
                           </ul>
                         </div>
                       </li>
@@ -109,32 +109,32 @@
 
             <div class="col-lg-3 col-md-12 col-sm-12" id="aside">
                 <aside> 
-                  <form>
+                  <form name="landingHome" class="needs-validation">
                     <br>
                     <!--<legend>Completa el formulario para recibir más información</legend>-->
                     <h5 style="color: black;">Completa el formulario para recibir más información</h5>
                     <hr>
                     
                     <div class="form-floating mb-4">
-                      <input type="nombre" class="form-control" id="floatingNombre" placeholder="Nombre">
+                      <input type="text" class="form-control" id="floatingNombre" placeholder="Nombre" maxlength="20" pattern="^[a-zA-Z ]*$" required>
                       <label for="floatingNombre">Nombre</label>
                     </div>
 
                     <div class="form-floating mb-4">
-                      <input type="apellido" class="form-control" id="floatingApellido" placeholder="Apellido">
+                      <input type="text" class="form-control" id="floatingApellido" placeholder="Apellido" maxlength="13" pattern="^[a-zA-Z ]*$" required>
                       <label for="floatingApellido">Apellido</label>
                     </div>
 
                     <div class="form-floating mb-4">
-                      <input type="telefono" class="form-control" id="floatingTelefono" placeholder="Telefono">
+                      <input type="number" class="form-control" id="floatingTelefono" placeholder="Telefono" maxlength="15" required>
                       <label for="floatingTelefono">Teléfono</label>
                     </div>
 
                     <div class="form-floating mb-4">
-                      <input type="email" class="form-control" id="floatingTelefono" placeholder="Email">
+                      <input type="email" class="form-control" id="floatingTelefono" placeholder="Email" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
                       <label for="floatingEmail">Email</label>
                     </div>
-                    
+                  
                     <div id="cont-1">
                       <fieldset class="row">
                         <legend class="col-form-label col-lg-5 col-md-5 col-sm-6 pt-1">Preferencia de Contacto</legend>
@@ -157,8 +157,11 @@
 
                     <div class="d-grid gap-2">
                       <br>
+                      
+                      <button type="submit" class="btn btn-primary">Enviar</button>
+                      <!--
                       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#envioForm">Enviar</button>
-                     
+                     -->
 
                       <!--Modal posterior a envío de formulario en el caso que el mismo se haya completado de forma completa-->     
                       <div class="modal" tabindex="-1" id="envioForm" >
@@ -339,6 +342,6 @@
          </footer>
     
     </div>
-
+    <script src="js/script.js"></script>
 </body>
 </html>

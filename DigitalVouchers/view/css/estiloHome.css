@@ -71,3 +71,23 @@ article>p{
     transition: all .5s;
 }
 
+.card-body{
+    background-color: rgb(178, 178, 183);
+}
+
+.cmn-divfloat {
+    position: fixed !important;
+    bottom: 45px;
+    right: 15px;
+    display: none;
+}
+
+.cmn-btncircle {
+    width: 100px !important;
+    height: 40px !important;
+    padding: 6px 0px;
+    border-radius: 15px;
+    font-size: 18px;
+    text-align: center;
+}
+

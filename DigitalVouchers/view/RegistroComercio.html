@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegistroCliente</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/estiloHome.css">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+    <div class="container">
+        <header>
+            <div class="row">
+                <div class="col-12">
+                    <h2 style="color: white; padding-left: 0.5em; padding-top: 0.3em;">Digital Vouchers</h2>
+                </div>
+            </div>
+        </header> 
+        
+        <div class="row" style="background-color: black; width: 100%; margin-left: 0%;">
+            <div class="col-12">
+                <h2 style="color: white;">Crear Cuenta Comercio</h2>
+            </div>
+        </div>
+
+        
+        <div class="row" style="background-color: grey; width: 100%; margin-left: 0%;">
+            <div class="col-12">
+                <br> <br>
+            </div>
+        </div>
+
+        <div class="row" style="background-color: grey; width: 100%; margin-left: 0%;">
+            <div class="col-1"></div>
+            <div class="col-7">
+                <form name="registroPersona" class="needs-validation">
+                    <legend>REGISTRATE PARA CREAR TU USUARIO</legend>
+                    <hr>
+
+                    <div class="row">   
+                        <label for="cuit" class="col-lg-2 col-md-6 col-sm-12 col-form-label">CUIT</label>
+                        <input type="number" class="form-control" id="inputCuit" style="width: 13em;" maxlength="11" required autofocus>
+
+                    </div>
+                  
+                    
+                    <br>
+
+                    <div class="row">
+                        <label for="inputNombres" class="col-7 col-form-label">RAZON SOCIAL</label>
+                        <label for="inputApellido" class="col-5 col-form-label">SITUACIÓN IMPOSITIVA</label>
+                    </div>                        
+
+                    <div class="row">
+                        <div class="col-6" >
+                            <input type="text" class="form-control" id="inputNombres" maxlength="30" required>
+                        </div>                       
+                        <div class="col-1"></div>
+                        <div class="col-4">
+                            <select class="form-select" id="situacion" name="situacionImpositiva1">
+                                <option>SITUACION 1</option>
+                                <option>SITUACION 2</option>
+                                <option>SITUACION 3</option>
+                              </select>                           
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="row">
+                        <label for="inputEMail" class="col-7 form-label">EMAIL</label>
+                        <label for="inputTelefono" class="col-5 form-label">TELEFONO</label>
+                    </div>
+                    <div class="row">
+                        <div class="col-5">
+                            <input type="email" class="form-control" id="inputEMail" placeholder="usuario@dominio" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
+                        </div>
+                        <div class="col-2"></div>
+                        <div class="col-4">
+                            <input type="number" class="form-control" id="inputTelefono" required>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="inputContraseña" class="form-label">CONTRASEÑA</label>
+                        </div>
+                        <div class="col-6">
+                            <label for="inputConfirmaContraseña" class="form-label">CONFIRMA CONTRASEÑA</label>
+                        </div>
+                    </div>
+                        
+                    <div class="row">
+                        <div class="col-5">
+                            <input type="password" class="form-control" id="inputContraseña" placeholder="**********"  minlength="8" maxlength="10" required>
+                        </div>
+                        <div class="col-1"></div>
+                        <div class="col-5">
+                            <input type="password" class="form-control" id="inputConfirmaContraseña" placeholder="**********"  minlength="8" maxlength="10" required>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="inputProvincia" class="form-label">PROVINCIA</label>
+                        </div>
+                        <div class="col-6">
+                            <label for="inputLocalidad" class="form-label">LOCALIDAD</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-5">
+                            <select class="form-select" id="provincias" name="sellist1">
+                                <option>BUENOS AIRES</option>
+                                <option>CAPITAL FEDERAL</option>
+                                <option>CORDOBA</option>        
+                                <option>MISIONES</option>
+                                <option>SANTA FE</option>
+                                <option>SALTA</option>
+                              </select>
+                            <!-- <input type="text" class="form-control" id="inputProvincia"  required>-->
+                        </div>
+                        <div class="col-1"></div>
+                        <div class="col-5">
+                            <select class="form-select" id="localidades" name="sellist2">
+                                <option>LOCALIDAD 1</option>
+                                <option>LOCALIDAD 2</option>
+                                <option>LOCALIDAD 3</option>        
+                                <option>LOCALIDAD 4</option>
+                                <option>LOCALIDAD 5</option>
+                              </select>
+                            <!--<input type="text" class="form-control" id="inputLocalidad" required>-->
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="row">
+                        <label for="inputCalle" class="col-7 col-form-label">CALLE</label>
+                        <label for="inputNumero" class="col-5 col-form-label">NÚMERO</label>
+                    </div>                        
+
+                    <div class="row">
+                        <div class="col-6" >
+                            <input type="calle" class="form-control" id="inputCalle" style="width: 100% ;" maxlength="30" pattern="^[a-zA-Z ]*$" required>
+                        </div>                       
+                        <div class="col-1"></div>
+                        <div class="col-4">
+                            <input type="number" class="form-control" id="inputNumero" style="width: 100% ;" min="1" max="9999"  required>
+                        </div>
+                    </div>
+                    <br>
+ 
+                    <div class="col-12">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="invalidCheck" required>
+                          <label class="form-check-label" for="invalidCheck">
+                            Acepto los términos y condiciones.
+                          </label>
+                          <div class="invalid-feedback">
+                            Debe estar de acuerdo para poder enviar y avanzar con su registro.
+                          </div>
+                        </div>
+                    </div>
+<!-- -->
+                    <br> <br>
+
+                    <div class="row">
+                        <div class="col-lg-7 col-md-12"></div>
+
+                        <div class="col-lg-2 col-md-12">
+                            <!--<button type="button" class="btn btn-primary" style="width: 100%;">Volver</button>-->
+                            <a href="VouchersHome.html" class="btn btn-primary" style="width: 100%;">Volver</a>
+                        </div>
+
+                        <div class="col-lg-2 col-md-12">
+                            <button type="submit" class="btn btn-primary" style="width: 100%;" onclick="validarContraseñas()">Enviar</button>
+                            <!--
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registroForm1" style="width: 100%;">Enviar</button>
+                            -->
+
+                            <!--Modal posterior a envío de formulario en el caso que el mismo se haya completado de forma completa-->     
+                            <div class="modal" tabindex="-1" id="registroForm" >
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                        <h5 class="modal-title">Información</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                        <p id="modalForm">La información de registro se envío de forma correcta. 
+                                            Revise su cuenta de correo y confirme la recepción para completar el registro.
+                                            Muchas gracias!!!</p>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                    </div>
+
+                    </div>
+
+                </form>
+                <br><br>
+            </div>
+            <div class="col-4"></div>
+        </div>
+    
+        <script src="js/script.js"></script>
+    </div>
+
+
+
+</body>
+</html>
