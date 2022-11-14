@@ -10,6 +10,8 @@ CREATE TABLE situacion_impositiva(
 CREATE TABLE tipo_voucher(
   ID_tipo_voucher INT NOT NULL AUTO_INCREMENT,
   Tipo_voucher VARCHAR(30) NOT NULL,
+  Descripcion_tipo VARCHAR(20) NOT NULL,
+  Compra_minima VARCHAR(50) NULL,
   PRIMARY KEY (ID_tipo_voucher),
   UNIQUE INDEX ID_TIPO_VOUCHER_UNIQUE (ID_tipo_voucher ASC) VISIBLE);
 
@@ -38,7 +40,7 @@ CREATE TABLE tipo_documento(
   UNIQUE INDEX ID_TIPO_DOCUMENTO_UNIQUE (ID_tipo_documento ASC) VISIBLE);
 
 CREATE TABLE comercio(
-  CUIT INT NOT NULL,
+  CUIT DOUBLE NOT NULL,
   Razon_Social VARCHAR(30) NOT NULL,
   ID_si INT NOT NULL,
   CONSTRAINT ID_si_FK
@@ -58,7 +60,7 @@ CREATE TABLE comercio(
   Nro INT NOT NULL,
   Logo VARCHAR(30) NULL,
   Fecha_Alta DATE,
-  Contraseña VARCHAR(10) NOT NULL,
+  Fecha_Baja DATE,
   Contraseña VARCHAR(10) NOT NULL,
   PRIMARY KEY (CUIT),
   UNIQUE INDEX CUIT_UNIQUE (CUIT ASC) VISIBLE);
@@ -72,7 +74,7 @@ CREATE TABLE persona(
   Nombre VARCHAR(40) NOT NULL,
   Apellido VARCHAR(15) NOT NULL,
   Fecha_Nacimiento DATE,
-  Telefono INT NOT NULL,
+  Telefono FLOAT NOT NULL,
   Email VARCHAR(30) NOT NULL,
   Sexo VARCHAR(10) NOT NULL,
   ID_provincia INT NOT NULL,
@@ -86,13 +88,14 @@ CREATE TABLE persona(
   Calle VARCHAR(30) NOT NULL,
   Nro INT NOT NULL,
   Fecha_Alta DATE,
+  Fecha_Baja DATE,
   Contraseña VARCHAR(10) NOT NULL,
   PRIMARY KEY (DNI),
   UNIQUE INDEX DNI_UNIQUE (DNI ASC) VISIBLE);
 
 CREATE TABLE voucher_padre(
   ID_voucher_padre INT NOT NULL AUTO_INCREMENT,	
-  CUIT INT NOT NULL,
+  CUIT DOUBLE NOT NULL,
   CONSTRAINT CUIT_FK
     FOREIGN KEY (CUIT)
     REFERENCES Comercio(CUIT),
@@ -104,7 +107,10 @@ CREATE TABLE voucher_padre(
   Fecha_Publicacion DATE,
   Fecha_Desde_Vigencia DATE,
   Fecha_Hasta_Vigencia DATE, 
-  Importe INT NULL,
+  ID_rubro INT NOT NULL,
+  CONSTRAINT ID_rubro_FK
+    FOREIGN KEY (ID_rubro)
+    REFERENCES rubro(ID_rubro),
   PRIMARY KEY (ID_voucher_padre),
   UNIQUE INDEX ID_VOUCHER_PADRE_UNIQUE (ID_voucher_padre) VISIBLE,
   ID_estado_voucher INT NOT NULL,
@@ -114,7 +120,7 @@ CREATE TABLE voucher_padre(
 );
 
 CREATE TABLE billetera(
-  ID_billetera INT NOT NULL AUTO_INCREMENT,
+  ID_billetera FLOAT NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (ID_billetera),
   UNIQUE INDEX ID_BILLETERA_UNIQUE (ID_billetera ASC) VISIBLE,
   DNI INT NOT NULL,
@@ -131,7 +137,12 @@ CREATE TABLE voucher(
     FOREIGN KEY (ID_voucher_padre)
     REFERENCES voucher_padre(ID_voucher_padre), 
   Fecha_Descarga DATE,
+  Fecha_Utilizacion DATE NULL,
   ID_estado_voucher INT NOT NULL,
+  ID_billetera FLOAT,
+  CONSTRAINT ID_billetera_voucher_FK
+    FOREIGN KEY (ID_billetera)
+    REFERENCES billetera(ID_billetera), 
   CONSTRAINT ID_estado_voucher_hijo_FK
     FOREIGN KEY (ID_estado_voucher)
     REFERENCES estado_voucher(ID_estado_voucher), 
@@ -153,12 +164,36 @@ CREATE TABLE historial(
     REFERENCES voucher(ID_voucher)
 );
 
+CREATE TABLE rubro(
+  ID_rubro INT NOT NULL AUTO_INCREMENT,
+  Descripcion_rubro VARCHAR(25) NOT NULL,
+  PRIMARY KEY (ID_rubro),
+  UNIQUE INDEX ID_RUBRO_UNIQUE (ID_rubro ASC) VISIBLE);
 
+CREATE TABLE interes_persona(
+  ID_billetera INT NOT NULL,
+  CONSTRAINT ID_billetera_FK
+    FOREIGN KEY (ID_billetera)
+    REFERENCES billetera(ID_billetera),
+  ID_rubro INT NOT NULL,
+  CONSTRAINT ID_rubro_persona_FK
+    FOREIGN KEY (ID_rubro)
+    REFERENCES rubro(ID_rubro),
+  fecha_desde DATE,
+  fecha_hasta DATE,
+  PRIMARY KEY (ID_billetera, ID_rubro));
 
-
-
-
-
-
-
+create table suscripcion(
+	DNI INT NOT NULL,
+	CONSTRAINT DNI_SUSC_FK
+		FOREIGN KEY (DNI)
+		REFERENCES persona(DNI),
+	CUIT DOUBLE NOT NULL,
+	CONSTRAINT CUIT_SUSC_FK
+		FOREIGN KEY (CUIT)
+		REFERENCES comercio(CUIT),
+	fecha date,
+        activo boolean
+);
     
+
