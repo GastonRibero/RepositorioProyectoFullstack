@@ -26,6 +26,7 @@
             </div>
         </div>
 
+        
         <div class="row" style="background-color: grey; width: 100%; margin-left: 0%;">
             <div class="col-12">
                 <br> <br>
@@ -35,24 +36,10 @@
         <div class="row" style="background-color: grey; width: 100%; margin-left: 0%;">
             <div class="col-1"></div>
             <div class="col-7">
-                <form>
+                <form name="registroPersona" class="needs-validation">
                     <legend>REGISTRATE PARA CREAR TU USUARIO</legend>
                     <hr>
-                    <!--
-                    <div class="row">                     
-                        <label for="docu" class="col-lg-2 col-md-12 col-form-label" style="display: flex; justify-content: flex-end;">DOCUMENTO</label>
-                        <select class="col-lg-2 col-md-12 form-select" id="docu" style="height: 2.3em; width: 10em;">
-                          <option selected>DNI</option>
-                          <option value="php">Libreta Cívica</option>
-                          <option value="java">Libreta de Enrolamiento</option>
-                        </select>
 
-                        <label for="inputNroDni" class="col-lg-2 col-md-6 col-sm-12 col-form-label" style="display: flex; justify-content: flex-end;">NRO. DNI</label>
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <input type="dni" class="form-control" id="inputNroDni">
-                        </div>
-                    </div>
-                    -->
                     <div class="row">   
 
                         <label for="docu" class="col-lg-2 col-md-6 col-sm-12 col-form-label">DOCUMENTO</label>
@@ -64,10 +51,13 @@
 
                         <label for="inputNroDni" class="col-lg-2 col-md-6 col-sm-12 col-form-label">NUMERO DNI</label>
                         <div class="col-lg-4 col-md-6 col-sm-12">
-                            <input type="dni" class="form-control" id="inputNroDni" style="width: 13em;">
+                            <div class="row">
+                                <input type="number" class="form-control" id="inputNroDni" style="width: 13em;" min="5000000" max="99999999" required autofocus>
+                            </div>
                         </div>
                     </div>
-
+                  
+                    
                     <br>
 
                     <div class="row">
@@ -77,11 +67,11 @@
 
                     <div class="row">
                         <div class="col-6" >
-                            <input type="nombres" class="form-control" id="inputNombres">
+                            <input type="text" class="form-control" id="inputNombres" maxlength="35" pattern="^[a-zA-Z ]*$" required>
                         </div>                       
                         <div class="col-1"></div>
                         <div class="col-4">
-                            <input type="apellido" class="form-control" id="inputApellido">
+                            <input type="text" class="form-control" id="inputApellido" maxlength="15" pattern="^[a-zA-Z ]*$" required>
                         </div>
                     </div>
                     <br>
@@ -92,11 +82,11 @@
                     </div>
                     <div class="row">
                         <div class="col-5">
-                            <input type="email" class="form-control" id="inputEMail">
+                            <input type="email" class="form-control" id="inputEMail" placeholder="usuario@dominio" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
                         </div>
                         <div class="col-2"></div>
                         <div class="col-4">
-                            <input type="telefono" class="form-control" id="inputTelefono">
+                            <input type="number" class="form-control" id="inputTelefono" required>
                         </div>
                     </div>
                     <br>
@@ -112,11 +102,11 @@
                         
                     <div class="row">
                         <div class="col-5">
-                            <input type="contraseña" class="form-control" id="inputContraseña">
+                            <input type="password" class="form-control" id="inputContraseña" placeholder="**********"  minlength="8" maxlength="10" required>
                         </div>
                         <div class="col-1"></div>
                         <div class="col-5">
-                            <input type="confirmacontraseña" class="form-control" id="inputConfirmaContraseña">
+                            <input type="password" class="form-control" id="inputConfirmaContraseña" placeholder="**********"  minlength="8" maxlength="10" required>
                         </div>
                     </div>
                     <br><br>
@@ -124,7 +114,7 @@
                     <div class="row">
                         <label for="inputFechaNacimiento" class="col-lg-3 col-md-6 col-sm-6 col-form-label">FECHA NACIMIENTO</label>
                         <div class="col-lg-4 col-md-6 col-sm-6">
-                            <input type="fechanacimiento" class="form-control" id="inputFechaNacimiento" style="width: 10em;">
+                            <input type="date" class="form-control" id="inputFechaNacimiento" style="width: 10em;" required>
                         </div>
                     </div>
                     <br>
@@ -140,11 +130,26 @@
 
                     <div class="row">
                         <div class="col-5">
-                            <input type="provincia" class="form-control" id="inputProvincia">
+                            <select class="form-select" id="provincias" name="sellist1">
+                                <option>BUENOS AIRES</option>
+                                <option>CAPITAL FEDERAL</option>
+                                <option>CORDOBA</option>        
+                                <option>MISIONES</option>
+                                <option>SANTA FE</option>
+                                <option>SALTA</option>
+                              </select>
+                            <!-- <input type="text" class="form-control" id="inputProvincia"  required>-->
                         </div>
                         <div class="col-1"></div>
                         <div class="col-5">
-                            <input type="localidad" class="form-control" id="inputLocalidad">
+                            <select class="form-select" id="localidades" name="sellist2">
+                                <option>LOCALIDAD 1</option>
+                                <option>LOCALIDAD 2</option>
+                                <option>LOCALIDAD 3</option>        
+                                <option>LOCALIDAD 4</option>
+                                <option>LOCALIDAD 5</option>
+                              </select>
+                            <!--<input type="text" class="form-control" id="inputLocalidad" required>-->
                         </div>
                     </div>
                     <br>
@@ -156,18 +161,18 @@
 
                     <div class="row">
                         <div class="col-6" >
-                            <input type="calle" class="form-control" id="inputCalle" style="width: 100% ;">
+                            <input type="calle" class="form-control" id="inputCalle" style="width: 100% ;" maxlength="30" pattern="^[a-zA-Z ]*$" required>
                         </div>                       
                         <div class="col-1"></div>
                         <div class="col-4">
-                            <input type="numero" class="form-control" id="inputNumero" style="width: 100% ;">
+                            <input type="number" class="form-control" id="inputNumero" style="width: 100% ;" min="1" max="9999" required>
                         </div>
                     </div>
                     <br>
-
+ 
                     <div class="col-12">
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                          <input class="form-check-input" type="checkbox" id="invalidCheck" required>
                           <label class="form-check-label" for="invalidCheck">
                             Acepto los términos y condiciones.
                           </label>
@@ -176,7 +181,7 @@
                           </div>
                         </div>
                     </div>
-
+<!-- -->
                     <br> <br>
 
                     <div class="row">
@@ -188,7 +193,7 @@
                         </div>
 
                         <div class="col-lg-2 col-md-12">
-                            <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registroForm1" style="width: 100%;">Enviar</button>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;" onclick="validarContraseñas()">Enviar</button>
                             <!--
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registroForm1" style="width: 100%;">Enviar</button>
                             -->
@@ -221,5 +226,10 @@
             <div class="col-4"></div>
         </div>
     
+        <script src="js/script.js"></script>
+    </div>
+
+
+
 </body>
 </html>

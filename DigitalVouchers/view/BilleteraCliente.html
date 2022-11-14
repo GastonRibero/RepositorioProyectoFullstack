@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billetera Cliente</title>
+    <link rel="stylesheet" href="css/estiloHome.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    
+    <div class="container">
+
+        <header style="background-color: rgb(0, 110, 255)">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <h1 style="color: white; padding-left: 0.5em; padding-top: 0.3em;">Digital Vouchers</h1>
+                    <a name="inicioFlotante"></a>
+                </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <p style="color: white; display: flex; justify-content: center; font-size: x-large;">Hola Martin Caceres. Bienvenido a tu Billetera Virtual</p>
+                <br>
+              </div>
+          </div>
+        </header>    
+
+        <nav>
+            <nav class="navbar navbar-expand-lg bg-dark">
+                <div class="container">
+                  <div class="col-xl-12 col-lg-4 col-md-4 col-sm-6">
+                  
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                        <li class="nav-item">
+                            <div class="dropdown">
+                              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                                Mis Vouchers
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                                <li><a class="dropdown-item active" href="BilleteraCliente.html#vouchersActivos">Activos</a></li>
+                                <li><a class="dropdown-item" href="BilleteraCliente.html#vouchersCaducados">Caducados</a></li>
+                                <li><a class="dropdown-item" href="BilleteraCliente.html#vouchersUtilizados">Utilizados</a></li>
+                              </ul>
+                            </div>
+                        </li>
+
+                      <li class="nav-item" style="padding-left: 0.8em;">
+                        <a class="nav-link" href="#"><h6>Descargar Nuevos Vouchers</h6></a>
+                      </li> 
+                      <li class="nav-item" style="padding-left: 0.8em;">
+                        <a class="nav-link" href="#"><h6>Sugerencias</h6></a>
+                      </li> 
+                      <li class="nav-item" style="padding-left: 0.8em;">
+                        <a class="nav-link" href="#"><h6>Sugerencias</h6></a>
+                      </li> 
+
+                    </ul>
+
+                    <div class="dropdown">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                            </svg>
+                            Mi cuenta
+                        </a>
+                      
+                        <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="dropdownMenuLink">
+                          <li><a class="dropdown-item" href="#">Modificar Cuenta</a></li>
+                          <li><a class="dropdown-item" href="#">Baja de Cuenta</a></li>
+                          <li><a class="dropdown-item" href="#">Notificaciones</a></li>
+                          <li><a class="dropdown-item" href="#">Configuración</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+                        </ul>
+                    </div>
+
+
+                  </div>
+                </div>
+                </div>
+            </nav>            
+
+        </nav>
+
+        <!--<div class="row" style="background-color: rgb(221, 221, 221); width: 100%; margin-left: 0em; ">-->
+        <!--Vouchers Activos-->
+        <div class="row" style="margin-top: 2em;">
+            <div class="col-12" >
+                <a name="vouchersActivos">
+                <h4>Vouchers Activos</h4>
+                <hr>
+            </div>
+          </div>
+
+        <div class="row justify-content-center" style="padding: 0.5em;">
+
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <!--<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-12" style="padding: 0.5em;">-->
+                <div class="card">
+                    <img src="imagenes/ejemploLogo.png" class="card-img-top" alt="..." style="width: 100%;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Título: Comercio - Descuento</h5>
+                        <p class="card-text">Descripción del Voucher: Fecha de Vigencia, consideraciones.</p>
+                        <a href="#" class="btn btn-primary">Más información</a>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="card">
+                    <img src="imagenes/ejemploLogo.png" class="card-img-top" alt="..." style="width: 100%;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Título: Comercio - Descuento</h5>
+                        <p class="card-text">Descripción del Voucher: Fecha de Vigencia, consideraciones.</p>
+                        <a href="#" class="btn btn-primary">Más información</a>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="card">
+                    <img src="imagenes/ejemploLogo.png" class="card-img-top" alt="..." style="width: 100%;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Título: Comercio - Descuento</h5>
+                        <p class="card-text">Descripción del Voucher: Fecha de Vigencia, consideraciones.</p>
+                        <a href="#" class="btn btn-primary">Más información</a>
+                    </div>
+                </div> 
+            </div>
+
+
+
+
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-12" style="margin-top: 0.5em;">
+                <div class="card">
+                    <img src="imagenes/ejemploLogo.png" class="card-img-top" alt="..." style="width: 100%;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Título: Comercio - Descuento</h5>
+                        <p class="card-text">Descripción del Voucher: Fecha de Vigencia, consideraciones.</p>
+                        <a href="#" class="btn btn-primary">Más información</a>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-12" style="margin-top: 0.5em;">
+                <div class="card">
+                    <img src="imagenes/ejemploLogo.png" class="card-img-top" alt="..." style="width: 100%;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Título: Comercio - Descuento</h5>
+                        <p class="card-text">Descripción del Voucher: Fecha de Vigencia, consideraciones.</p>
+                        <a href="#" class="btn btn-primary">Más información</a>
+                    </div>
+                </div> 
+            </div>
+
+            
+        </div>
+
+        <!--Vouchers Caducados-->
+        <div class="row" style="margin-top: 2em;">
+            <div class="col-12" >
+                <br>
+                <a name="vouchersCaducados">
+                <h4>Vouchers Caducados</h4>
+                <hr>
+            </div>
+          </div>
+
+        <div class="row justify-content-center" style="padding: 0.5em;">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <!--<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-12" style="padding: 0.5em;">-->
+                <div class="card">
+                    <img src="imagenes/ejemploLogo.png" class="card-img-top" alt="..." style="width: 100%;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Título: Comercio - Descuento</h5>
+                        <p class="card-text">Descripción del Voucher: Fecha de Vigencia, consideraciones.</p>
+                        <a href="#" class="btn btn-primary">Más información</a>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="card">
+                    <img src="imagenes/ejemploLogo.png" class="card-img-top" alt="..." style="width: 100%;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Título: Comercio - Descuento</h5>
+                        <p class="card-text">Descripción del Voucher: Fecha de Vigencia, consideraciones.</p>
+                        <a href="#" class="btn btn-primary">Más información</a>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="card">
+                    <img src="imagenes/ejemploLogo.png" class="card-img-top" alt="..." style="width: 100%;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Título: Comercio - Descuento</h5>
+                        <p class="card-text">Descripción del Voucher: Fecha de Vigencia, consideraciones.</p>
+                        <a href="#" class="btn btn-primary">Más información</a>
+                    </div>
+                </div> 
+            </div>
+
+
+
+
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-12" style="margin-top: 0.5em;">
+                <div class="card">
+                    <img src="imagenes/ejemploLogo.png" class="card-img-top" alt="..." style="width: 100%;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Título: Comercio - Descuento</h5>
+                        <p class="card-text">Descripción del Voucher: Fecha de Vigencia, consideraciones.</p>
+                        <a href="#" class="btn btn-primary">Más información</a>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-12" style="margin-top: 0.5em;">
+                <div class="card">
+                    <img src="imagenes/ejemploLogo.png" class="card-img-top" alt="..." style="width: 100%;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Título: Comercio - Descuento</h5>
+                        <p class="card-text">Descripción del Voucher: Fecha de Vigencia, consideraciones.</p>
+                        <a href="#" class="btn btn-primary">Más información</a>
+                    </div>
+                </div> 
+            </div>
+
+            
+        </div>
+
+        <!--Vouchers Utilizados-->
+        <div class="row" style="margin-top: 2em;">
+            <div class="col-12" >
+                <br>
+                <a name="vouchersUtilizados">
+                <h4>Vouchers Utilizados</h4>
+                <hr>
+            </div>
+          </div>
+
+        <div class="row justify-content-center" style="padding: 0.5em;">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <!--<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-12" style="padding: 0.5em;">-->
+                <div class="card">
+                    <img src="imagenes/ejemploLogo.png" class="card-img-top" alt="..." style="width: 100%;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Título: Comercio - Descuento</h5>
+                        <p class="card-text">Descripción del Voucher: Fecha de Vigencia, consideraciones.</p>
+                        <a href="#" class="btn btn-primary">Más información</a>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="card">
+                    <img src="imagenes/ejemploLogo.png" class="card-img-top" alt="..." style="width: 100%;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Título: Comercio - Descuento</h5>
+                        <p class="card-text">Descripción del Voucher: Fecha de Vigencia, consideraciones.</p>
+                        <a href="#" class="btn btn-primary">Más información</a>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="card">
+                    <img src="imagenes/ejemploLogo.png" class="card-img-top" alt="..." style="width: 100%;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Título: Comercio - Descuento</h5>
+                        <p class="card-text">Descripción del Voucher: Fecha de Vigencia, consideraciones.</p>
+                        <a href="#" class="btn btn-primary">Más información</a>
+                    </div>
+                </div> 
+            </div>
+
+
+
+
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-12" style="margin-top: 0.5em;">
+                <div class="card">
+                    <img src="imagenes/ejemploLogo.png" class="card-img-top" alt="..." style="width: 100%;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Título: Comercio - Descuento</h5>
+                        <p class="card-text">Descripción del Voucher: Fecha de Vigencia, consideraciones.</p>
+                        <a href="#" class="btn btn-primary">Más información</a>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-12" style="margin-top: 0.5em;">
+                <div class="card">
+                    <img src="imagenes/ejemploLogo.png" class="card-img-top" alt="..." style="width: 100%;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Título: Comercio - Descuento</h5>
+                        <p class="card-text">Descripción del Voucher: Fecha de Vigencia, consideraciones.</p>
+                        <a href="#" class="btn btn-primary">Más información</a>
+                    </div>
+                </div> 
+            </div>
+
+            
+        </div>
+
+    </div>
+
+    <div id="div-totop" class="cmn-divfloat">
+        <a href="BilleteraCliente.html#inicioFlotante" class="btn btn-outline-primary cmn-btncircle">
+            <!--<i class="fa fa-arrow-up"></i>-->
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+              </svg>
+            <i class="fa fa-arrow-up" aria-hidden="true">Volver</i>
+        </a>
+    </div>
+    
+    <script src="js/script.js"></script>
+
+</body>
+</html>
